@@ -7,8 +7,6 @@ const prisma = new PrismaClient();
 
 @Injectable()
 export class QuestionTypeService {
-  private readonly test = [];
-
   async getAllQuestion() {
     return await prisma.questionDetail.findMany({
       select: {
