@@ -10,7 +10,7 @@ export class QuestionTypeService {
   private readonly test = [];
 
   async getAllQuestion() {
-    return prisma.questionDetail.findMany({
+    return await prisma.questionDetail.findMany({
       select: {
         questionType: true,
         questionContent: true,
