@@ -9,20 +9,8 @@ generator client {
 
 model QuestionDetail {
   id       String    @id @default(auto()) @map("_id") @db.ObjectId
-  questionType QuestionTypeEnum
+  questionType String
   questionContent String[]
   answerContent String[]
-  companies     Company[]
-}
-
-enum QuestionTypeEnum {
-  JAVASCRIPT
-  HTML
-  REACT
-  VUE
-}
-
-enum Company {
-  Google
-  Facebook
+  companies     String[]
 }
